@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SLF landing home page example desgined by allison romero 2025"
+    />
+    <title>slf landing page</title>
+    <link rel="preload" href="../sass/main.css" as="style" />
+    <link rel="stylesheet" href="../sass/main.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <h1 class="banner-title">
+        Strong Leaders<br />
+        of <br />
+        the Future
+      </h1>
+    </div>
+    <header>
+      <div class="navbar" role="navigation">
+        <button class="menu-btn" aria-label="menu button">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 29 29"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <line
+              x1="2"
+              y1="5"
+              y2="5"
+              x2="30"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line top-line"
+            />
+            <line
+              x1="2"
+              y1="15"
+              x2="30"
+              y2="15"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line middle-line"
+            />
+            <line
+              x1="2"
+              y1="25"
+              x2="30"
+              y2="25"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line bottom-line"
+            />
+          </svg>
+        </button>
+        <span class="logo nav-logo">SLF</span>
+        <button
+          id="theme-toggle"
+          class="theme-btn"
+          aria-label="light dark theme toggle button"
+        >
+          <img
+            src="../imgs/day-and-night.png"
+            class="theme-logo"
+            alt="dark and light theme toggle"
+            aria-hidden="true"
+            focusable="false"
+          />
+        </button>
+      </div>
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="menu">
+          <li><a href="../pages/index.html">Home</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/soar.html">soar</a></li>
+          <li class="register-li">
+            <a
+              href="../pages/register.html"
+              class="register-link"
+              id="register-link"
+              aria-labelledby="register-link register"
+              >register</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="cta" role="region" aria-labelledby="event-title">
+      <div class="container">
+        <div class="cta-content">
+          <h1 id="event-title">JOIN THE <br />SOAR EVENT</h1>
+          <h2 class="date-location">
+            Sunday October 4, 2025<br />
+            @ 1pm<br />
+            Los Angeles<br />
+            Convention Center
+          </h2>
+          <button class="register-btn" aria-label="soar event register">
+            <a href="../pages/register.html">Register Now</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="about" role="region" aria-labelledby="about-title">
+      <div class="container">
+        <h1 id="about-title">2025 soar event</h1>
+        <div class="about-grp1">
+          <img
+            src="../imgs/crowd.jpg"
+            alt="crowd at an event"
+            class="about-img"
+            loading="lazy"
+          />
+          <p>
+            SLF is hosting its annual SOAR event at the Los Angeles Convention
+            Center on October 4, 2025. The event will feature inspiring
+            speakers, interactive workshops, and networking opportunities.<br />
+            Attendees will have the chance to learn from industry leaders, gain
+            new skills, and connect with like-minded individuals. Don't miss out
+            on this exciting event. Reserve your spot NOW!
+          </p>
+        </div>
+        <h1 class="soar-about-title">about the event</h1>
+        <div class="about-grp2">
+          <img
+            src="../imgs/presentation.jpg"
+            alt="presentation"
+            class="about-img"
+            loading="lazy"
+          />
+          <div class="p-about-grp2">
+            <p class="align-top">
+              SOAR represents the four key components of successful leadership:
+              strong, original, adaptable, and resilient. With problem solving
+              skills and key strategies, leaders can help organizations and
+              followers reach their full potential.
+            </p>
+            <p>
+              This annual event encourages people of all ages and backgrounds to
+              become leaders in their local communities. Best of all, this event
+              is free! Register today and join us as we discuss what it means to
+              be a great leader. SOAR high and learn what your capable of!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="newsletter"
+      role="region"
+      aria-labelledby="newsletter-title"
+    >
+      <div class="container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title" id="newsletter-title">
+            Stay Up to Date
+          </h2>
+          <p>
+            Sign up to be notified about upcoming events, learn about
+            volunteering opportunities, and more!
+          </p>
+        </div>
+        <button
+          class="mail-btn"
+          id="mail-btn-popup"
+          aria-label="newsletter signup"
+        >
+          Join our Mailing List
+        </button>
+        <div class="newsletter-popup" id="mail-popup">
+          <div class="mail-container">
+            <button
+              class="close-btn"
+              id="mail-close-btn"
+              aria-label="close popup"
+            >
+              X
+            </button>
+            <div class="mail-form">
+              <h2 class="mail-popup-title">Sign Up for Our Newsletter</h2>
+              <h3 class="mail-popup-subtitle">never miss an update</h3>
+              <form action="post" class="newsletter-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" />
+                <label for="email">Email:</label>
+                <input type="email" id="email" />
+                <button
+                  class="send-btn"
+                  type="submit"
+                  id="mail-send-btn"
+                  aria-label="submit newsletter form"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimony" role="region" aria-labelledby="testimonies">
+      <div class="container">
+        <h1 id="testimonies">testimonies</h1>
+        <div class="testimony-box">
+          <div class="testimony-1 card">
+            <img
+              src="../imgs/woman.jpg"
+              alt="woman"
+              class="card-img"
+              loading="lazy"
+            />
+            <p>
+              <em>
+                "Attending the SOAR event was a life-changing experience. I met
+                so many inspiring people and learned skills that have helped me
+                in my career."<br /><br
+              /></em>
+              -Sarah L.
+            </p>
+          </div>
+          <div class="testimony-2 card">
+            <img
+              src="../imgs/man.jpg"
+              alt="man"
+              class="card-img"
+              loading="lazy"
+            />
+            <p>
+              <em>
+                "The workshops at the SOAR event were incredibly informative and
+                engaging. I left feeling motivated and empowered to take on new
+                challenges."<br /><br />
+              </em>
+              -James K.
+            </p>
+          </div>
+          <div class="testimony-3 card">
+            <img
+              src="../imgs/professor.jpg"
+              alt="professor"
+              class="card-img"
+              loading="lazy"
+            />
+            <p>
+              <em>
+                "As a speaker at the SOAR event, I was amazed by the crowds
+                energy. It was an honor to share my knowledge with a passionate
+                group."<br /><br
+              /></em>
+              -Dr. Emily R.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p class="footer-logo">SLF</p>
+        <h4 class="footer-title">Follow Us On Our Socials</h4>
+        <div class="socials">
+          <img src="../imgs/twitter.png" alt="twitter" class="social-link" />
+          <img
+            src="../imgs/instagram.png"
+            alt="instagram"
+            class="social-link"
+          />
+          <img src="../imgs/linkedin.png" alt="linkedin" class="social-link" />
+        </div>
+        <p class="contact">
+          Contact us:<br />
+          volunteer@slf.org<br />
+          convention.support@slf.org<br />
+          +1 (800) 555-1234
+        </p>
+        <p class="copyright">
+          Copyright&copy;2025 All rights reserved<br />
+          Designed By Allison Romero
+        </p>
+      </div>
+    </footer>
+    <script defer src="../js/index.js"></script>
+    <script defer src="../js/popup.js"></script>
+  </body>
+</html>
