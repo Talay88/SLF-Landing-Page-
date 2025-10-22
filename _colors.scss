@@ -1,0 +1,13 @@
+$light: #f6eff0;
+$dark: #693d43;
+$accent-dark: #693d59;
+$accent: #bd9366;
+$accent-blue: #3d6963;
+
+//.light-mode
+$background-light: $light;
+$foreground-dark: $dark;
+
+//.dark-mode
+$background-dark: $dark;
+$foreground-light: $light;

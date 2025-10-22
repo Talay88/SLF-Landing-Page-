@@ -1,0 +1,197 @@
+@use "colors.scss" as *;
+
+.nav {
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav.active {
+  display: block;
+  background: $accent-dark;
+}
+
+.menu {
+  list-style: none;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  gap: 3em;
+  padding: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: $light;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Syncopate", sans-serif;
+}
+
+nav a:hover,
+nav a:focus {
+  color: $accent;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0.75em;
+}
+
+.menu-btn {
+  background: transparent;
+  height: 45px;
+  width: 50x;
+  border-radius: 0.313em;
+  z-index: 8000;
+  border: none;
+  box-shadow: none;
+}
+
+.menu-btn .line {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-btn.active {
+  background: $accent;
+}
+
+.menu-btn.active .middle-line {
+  display: none;
+}
+
+.menu-btn.active .top-line {
+  transform: rotate(45deg) translate(6px, -3px);
+}
+
+.menu-btn.active .bottom-line {
+  transform: rotate(-45deg) translate(-18px, -3px);
+}
+
+.theme-logo {
+  object-fit: contain;
+  padding: 0.15em 0;
+  width: 100%;
+}
+
+.theme-btn {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to top right, $light, $accent, $accent-dark);
+  border: 1px solid $dark;
+}
+
+.logo {
+  font-family: "Notable", sans-serif;
+  font-size: 2em;
+}
+
+.theme-btn.active {
+  display: none;
+  opacity: 0;
+}
+
+.active .logo {
+  display: none;
+}
+
+.navbar.active {
+  background: $accent-dark;
+  transition: all 0.1s ease-in-out;
+}
+
+@media (min-width: 900px) {
+  .menu-btn,
+  .menu-btn.active {
+    display: none;
+  }
+
+  .active .logo {
+    display: block;
+  }
+
+  .nav,
+  .nav.active {
+    display: block;
+    height: auto;
+    background: unset;
+  }
+  .navbar,
+  .navbar.active {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 120px;
+    align-items: center;
+    background: unset;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .menu a {
+    font-size: 1em;
+    color: inherit;
+    letter-spacing: none;
+    font-family: optima;
+  }
+
+  #register-link {
+    font-size: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    height: 120px;
+  }
+  .theme-btn,
+  .theme-btn.active {
+    display: block;
+    position: absolute;
+    right: 30px;
+  }
+
+  .navbar .logo {
+    font-size: 1.875rem;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+
+  .register-li {
+    color: $light;
+  }
+
+  .register-link {
+    border: 1px solid $accent-blue;
+    outline: 1px solid $accent;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+    background: linear-gradient(30deg, $accent-dark, $dark, $accent-dark);
+  }
+
+  #register-link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    transition: all 0.1s ease;
+  }
+
+  #register-link:hover,
+  #register-link:active {
+    background: $light;
+    color: $dark;
+    font-weight: bold;
+    border: 2px solid $accent;
+    outline: 2px double $accent-blue;
+  }
+}

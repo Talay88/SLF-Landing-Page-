@@ -1,0 +1,271 @@
+@use "colors.scss" as *;
+
+.newsletter-popup,
+.about-modal,
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-popup.mail-active,
+.about-modal.modal-active,
+.contact-modal.contact-active {
+  display: flex;
+}
+
+.mail-form,
+.modal-content {
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.mail-form {
+  background: $accent-dark;
+  color: $light;
+  padding: 1.25rem 2rem 1.5rem 2rem;
+}
+
+.modal-content {
+  background: $light;
+  color: $dark;
+  padding: 0.5em 0.75em;
+}
+
+.mail-container {
+  position: relative;
+}
+
+#mail-close-btn,
+#modal-close-btn,
+#close-contact-btn {
+  display: block;
+  position: absolute;
+  top: 1%;
+  right: 12%;
+  padding: 0;
+  background: none;
+  font-weight: 900;
+  border: none;
+}
+
+#close-contact-btn {
+  top: 0;
+  right: -0.5%;
+  padding: 0.3em 0.65em;
+}
+
+#mail-close-btn,
+#close-contact-btn {
+  color: $light;
+}
+
+#modal-close-btn {
+  color: $dark;
+}
+
+.newsletter-form input {
+  border-radius: 0;
+  border: 1px solid $accent-blue;
+  padding: 0.25em 1em;
+}
+
+.newsletter-form label {
+  padding-top: 0.95em;
+  padding-bottom: 0.35em;
+}
+
+.newsletter-form label,
+.contact-form label {
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.contact-form label {
+  padding: 0.5em 0 0.15em 0;
+}
+
+.contact-form input {
+  padding: 0.23em 0.25em;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.newsletter-form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.send-btn {
+  margin: 1.22rem auto 0.95rem auto;
+  padding: 0.5em 1.5em;
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background: $accent-blue;
+}
+
+.send-btn,
+.contact-submit-btn {
+  background: $dark;
+  color: $light;
+  width: 100%;
+  border: 1px solid $accent;
+}
+
+.contact-submit-btn {
+  padding: 0.5em 2em;
+  margin: 0.75em auto 0.25em auto;
+}
+
+.contact-submit-btn:hover,
+.contact-submit-btn:focus {
+  background: $accent;
+  color: $accent-dark;
+  font-weight: bold;
+  border: 1px solid $dark;
+}
+
+.mail-popup-title {
+  font-family: "Syncopate", sans-serif;
+  font-size: 1.5625rem;
+}
+
+.mail-popup-subtitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 2px;
+  color: $accent;
+}
+
+@media (min-width: 600px) {
+  .mail-form {
+    padding: 2rem;
+  }
+  .send-btn {
+    margin: 1.8rem auto;
+  }
+}
+
+//about newsletter popup
+
+.about-modal .send-btn {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid $accent;
+  outline: 1px solid $dark;
+  padding: 0.15em 0.3em;
+  margin-top: 0.53rem;
+  width: 100%;
+}
+
+.about-modal .send-btn:hover,
+.about-modal .send-btn:focus {
+  background: $accent-blue;
+  font-weight: bold;
+}
+
+.about-modal .modal-content {
+  outline: 2px solid $accent-blue;
+}
+
+.about-modal .mail-popup-subtitle {
+  color: $accent-blue;
+  font-weight: 600;
+}
+
+.about-modal label {
+  color: $accent-dark;
+  font-weight: 500;
+}
+
+.about-modal input {
+  border: 2px double $accent;
+  outline: 1px solid $accent-blue;
+}
+
+//about contact popup
+
+.contact-modal-container {
+  position: relative;
+  margin: 0 auto;
+  background: $accent-blue;
+  padding: 2rem 1.5rem;
+  border: 1px solid $accent;
+  max-width: 530px;
+}
+
+.contact-form,
+.contact-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 390px) {
+  .contact-modal-container {
+    width: 80%;
+    max-width: 550px;
+  }
+}
+
+.contact-modal h1 {
+  margin: 0.25em auto 0.35em auto;
+  border-bottom: 1px solid $accent;
+}
+
+.contact-modal-content h3 {
+  padding: 0;
+  margin: 0.15em auto 0.15em auto;
+  font-family: verdana, sans-serif;
+  font-weight: normal;
+  color: $accent;
+  text-shadow: 1px 2px 2px $dark;
+}
+
+.contact-modal-content > p,
+.contact-modal-content p:first-of-type {
+  margin: 0 auto 0.15em auto;
+  padding-bottom: 0.25em;
+  font-size: 1rem;
+}
+
+.contact-form,
+textarea,
+.contact-form,
+.contact-modal-content,
+.contact-form-bx,
+.contact-modal-content > p,
+.contact-modal-content p:first-of-type {
+  width: 100%;
+}
+
+.contact-form {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form textarea {
+  height: 3lh;
+  border: 2px solid $accent;
+}
+
+@media (min-width: 600px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+  }
+  .contact-submit-btn {
+    width: 90%;
+  }
+}
