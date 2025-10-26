@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slf about page</title>
+    <meta
+      name="description"
+      content="demo about page on slf designed by allison romero 2025"
+    />
+    <link rel="stylesheet" href="../sass/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar" role="navigation">
+        <button class="menu-btn" aria-label="menu button">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 29 29"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <line
+              x1="2"
+              y1="5"
+              y2="5"
+              x2="30"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line top-line"
+            />
+            <line
+              x1="2"
+              y1="15"
+              x2="30"
+              y2="15"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line middle-line"
+            />
+            <line
+              x1="2"
+              y1="25"
+              x2="30"
+              y2="25"
+              stroke="black"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="line bottom-line"
+            />
+          </svg>
+        </button>
+        <span class="logo nav-logo">SLF</span>
+        <button
+          id="theme-toggle"
+          class="theme-btn"
+          aria-label="dark light theme toggle button"
+        >
+          <img
+            src="../imgs/day-and-night.png"
+            class="theme-logo"
+            alt="dark and light theme toggle"
+            aria-hidden="true"
+            focusable="false"
+          />
+        </button>
+      </div>
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/soar.html">soar</a></li>
+          <li class="register-li">
+            <a
+              href="../pages/register.html"
+              class="register-link"
+              id="register-link"
+              aria-labelledby="register-link register"
+              >register</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="slf-about" role="region" aria-labelledby="about-title">
+      <div class="container">
+        <h1 id="about-title">about</h1>
+        <div class="slf-about-content">
+          <img
+            src="../imgs/about-img.jpg"
+            alt="slf group"
+            class="slf-about-img"
+            srcset="
+              ../srcset-imgs/about-img1920w.jpg 1920w,
+              ../srcset-imgs/about-img900w.jpg   900w,
+              ../srcset-imgs/about-img700w.jpg   700w,
+              ../srcset-imgs/about-img400w.png   400w
+            "
+          />
+          <p>
+            The Strong Leaders of the Future organization is a non-profit
+            organization based in Los Angeles, California. The organization is
+            dedicated to helping youth and local community members become
+            thriving leaders.
+          </p>
+          <p>
+            It's mission is to empower the next generation of leaders across Los
+            Angeles by fostering practical leadership skills, civic engagement,
+            and collaborative problem-solving within our diverse and vibrant
+            communities. Through grassroots mentorship, accessible workshops,
+            and project-based initiatives, we equip residents with the tools to
+            drive positive change and build a more resilient and equitable city
+            from the ground up.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="newsletter-cta"
+      role="region"
+      aria-labelledby="newsletter-heading"
+    >
+      <div class="container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-heading" id="newsletter-heading">
+            Want to learn more?
+          </h2>
+          <div class="newsletter-grp">
+            <p>
+              Sign up for our newsletter to<br />
+              get all the latest information!
+            </p>
+            <button class="mail-btn" id="modalopen">
+              Join our Mailing List
+            </button>
+            <div class="about-modal">
+              <div class="mail-container">
+                <button
+                  class="close-btn"
+                  id="modal-close-btn"
+                  aria-label="close popup"
+                >
+                  X
+                </button>
+                <div class="modal-content">
+                  <h2 class="mail-popup-title">Sign Up for Our Newsletter</h2>
+                  <h3 class="mail-popup-subtitle">never miss an update</h3>
+                  <form action="post" class="newsletter-form">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" />
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" />
+                    <button
+                      class="send-btn"
+                      type="submit"
+                      id="mail-send-btn"
+                      aria-label="submit newsletter form"
+                    >
+                      Send
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="history" role="region" aria-labelledby="title-history">
+      <div class="container">
+        <h1 id="title-history">history</h1>
+        <div class="history-content">
+          <img
+            src="../imgs/founder.jpg"
+            alt="slf founder"
+            class="founder-img"
+            srcset="
+              ../srcset-imgs/founder1920w.jpg 1920w,
+              ../srcset-imgs/founder900w.jpg   900w,
+              ../srcset-imgs/founder700w.jpg   700w,
+              ../srcset-imgs/founder400w.jpg   400w
+            "
+          />
+          <p>
+            SLF was founded in 2005 by former community organizer Elena
+            Rodriguez, who sought to empower residents of Los Angeles with
+            practical leadership skills to address local challenges.
+          </p>
+          <p>
+            In 2005, Elena Rodriguez, disheartened by a perceived lack of local
+            empowerment in her community, envisioned an organization that would
+            equip residents with the skills and confidence to lead their own
+            change initiatives.
+          </p>
+          <p>
+            SLF began with a series of small, accessible workshops held in local
+            community centers, covering topics like public speaking, community
+            organizing, and project management.<br />
+            Rodriguez and her early volunteers prioritized reaching residents
+            from underserved communities, using a grassroots approach to build
+            trust and demonstrate the value of the training.
+          </p>
+          <p>
+            It eventually grew to become the strong and successful organization
+            it is today. Rodriguez's efforts paved the way for new leaders to
+            start their own organizations. Her efforts lead to the creation of
+            the triumphant annual SOAR event.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="volunteer" role="region" aria-labelledby="title-volunteer">
+      <div class="container">
+        <h1 id="title-volunteer">volunteer</h1>
+        <div class="volunteer-content">
+          <div class="volunteer-row">
+            <img
+              src="../imgs/helping-others.jpg"
+              alt="volunteers"
+              class="about-volunteer-img"
+            />
+            <p>
+              Volunteers are a crucial aspect of SLF. Despite our success, SLF
+              consistently struggles with securing stable and sufficient
+              funding; often relying on grants and volunteer efforts.<br /><br />
+              This limits our ability to scale our programs and reach more
+              communities. Yet, as community leaders and volunteers work togther
+              to aid SLF with funding and daily operations, their continued
+              support makes the impossible possible.
+            </p>
+          </div>
+          <div class="volunteer-row2">
+            <div class="volunteer-row2-ps">
+              <p>
+                The organization has to navigate complex and often competing
+                interests within Los Angeles's diverse political landscape,
+                sometimes finding it difficult to remain neutral while still
+                serving a broad base of community members.
+              </p>
+              <p>
+                SLF needs volunteers to advocate and cement its reputation as a
+                key incubator for local leadership. Volunteers help develop
+                engagement with citizens in local communities and raise funds
+                for daily operations. They are crucial to continue to shape the
+                future of Los Angeles.
+              </p>
+            </div>
+            <div class="volunteer-cta">
+              <hgroup>
+                <h2>interested in volunteering?</h2>
+                <p>Contact us today for volunteering opportuities!</p>
+              </hgroup>
+              <button
+                class="contact-btn"
+                id="open-contact-btn"
+                aria-label="contact button"
+              >
+                CONTACT US
+              </button>
+              <!---contact popup modal-->
+              <div class="contact-modal" id="contact-modal">
+                <div class="contact-modal-container">
+                  <button id="close-contact-btn" aria-label="close popup">
+                    X
+                  </button>
+                  <div class="contact-modal-content">
+                    <h1>contact us</h1>
+                    <h3>email us:</h3>
+                    <p>
+                      volunteer@slf.org<br />
+                      convention.support@slf.org
+                    </p>
+                    <h3>call us:</h3>
+                    <p>+1 (800) 555-1234</p>
+                    <h3>leave us a message:</h3>
+                    <div class="contact-form-bx">
+                      <form action="post" class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" />
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message"></textarea>
+                        <button
+                          type="submit"
+                          class="contact-submit-btn"
+                          aria-label="submit contact form"
+                        >
+                          Send
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="about-soar"
+      role="region"
+      aria-labelledby="join-event-title"
+    >
+      <div class="container">
+        <div class="about-soar-content">
+          <h1 id="join-event-title">join us!</h1>
+          <p>
+            Join us for our annual SOAR event on October 4, 2025 at the Los
+            Angeles Convention Center. Register below or
+            <a href="#soar-info" class="soar-link">click here</a> to learn more!
+          </p>
+          <button class="register-btn" aria-label="register for event">
+            <a href="../pages/register.html">Register Now</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p class="footer-logo">SLF</p>
+        <h4 class="footer-title">Follow Us On Our Socials</h4>
+        <div class="socials">
+          <img src="../imgs/twitter.png" alt="twitter" class="social-link" />
+          <img
+            src="../imgs/instagram.png"
+            alt="instagram"
+            class="social-link"
+          />
+          <img src="../imgs/linkedin.png" alt="linkedin" class="social-link" />
+        </div>
+        <p class="contact">
+          Contact us:<br />
+          volunteer@slf.org<br />
+          convention.support@slf.org<br />
+          +1 (800) 555-1234
+        </p>
+        <p class="copyright">
+          Copyright&copy;2025 All rights reserved<br />
+          Designed By Allison Romero
+        </p>
+      </div>
+    </footer>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+  </body>
+</html>

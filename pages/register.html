@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register page</title>
+    <meta
+      name="description"
+      content="demo register slf page for soar event designed by allison romero 2025
+    "
+    />
+    <link rel="stylesheet" href="../sass/main.css" />
+  </head>
+  <body>
+    <div class="style-all">
+      <header>
+        <div class="navbar" role="navigation">
+          <button class="menu-btn" aria-label="menu button">
+            <svg
+              height="30"
+              width="30"
+              viewbox="0 0 29 29"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <line
+                x1="2"
+                y1="5"
+                y2="5"
+                x2="30"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                class="line top-line"
+              />
+              <line
+                x1="2"
+                y1="15"
+                x2="30"
+                y2="15"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                class="line middle-line"
+              />
+              <line
+                x1="2"
+                y1="25"
+                x2="30"
+                y2="25"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                class="line bottom-line"
+              />
+            </svg>
+          </button>
+          <span class="logo nav-logo">SLF</span>
+          <button
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="light dark theme toggle button"
+          >
+            <img
+              src="../imgs/day-and-night.png"
+              class="theme-logo"
+              alt="dark and light theme toggle"
+              aria-hidden="true"
+              focusable="false"
+            />
+          </button>
+        </div>
+        <nav class="nav" aria-label="Main Navigation">
+          <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/soar.html">soar</a></li>
+            <li class="register-li">
+              <a
+                href="../pages/register.html"
+                class="register-link"
+                id="register-link"
+                aria-labelledby="register-link register"
+                >register</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="register" role="region" aria-labelledby="register-title">
+        <div class="container">
+          <h1 id="register-title">the 2025 soar event</h1>
+          <h2>register now</h2>
+          <div class="form-container">
+            <form action="post" class="register-form" autocomplete="on">
+              <div class="form-group fname">
+                <label for="fname" class="color-dark">First Name:</label>
+                <input
+                  type="text"
+                  id="fname"
+                  required
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group lname">
+                <label for="lname" class="color-dark">Last Name:</label>
+                <input
+                  type="text"
+                  id="lname"
+                  required
+                  autocomplete="family-name"
+                />
+              </div>
+              <div class="form-group email">
+                <label for="email" class="color-dark">Email:</label>
+                <input
+                  type="email"
+                  required
+                  id="email"
+                  pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+                  autocomplete="email"
+                  placeholder="john.doe@example.com"
+                />
+              </div>
+              <div class="form-group age">
+                <label for="age" class="color">Age:</label>
+                <input
+                  type="number"
+                  id="age"
+                  placeholder="optional"
+                  name="age"
+                  min="1"
+                  max="120"
+                />
+              </div>
+              <div class="form-group phone">
+                <label for="phone" class="color">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  autocomplete="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="e.g., (123) 456-7890"
+                />
+              </div>
+              <div class="form-group company">
+                <label for="company" class="color">Company:</label>
+                <input type="text" id="company" placeholder="optional" />
+              </div>
+              <div class="form-group terms">
+                <label for="privacy" class="color fine-print"
+                  >Terms and conditions *<br />
+                  <input type="checkbox" id="privacy" />
+                  <span class="privacy">
+                    I consent that the event organizers may email me regarding
+                    the event or related matters.
+                  </span>
+                </label>
+              </div>
+            </form>
+            <button
+              type="submit"
+              value="submit"
+              class="register-btn"
+              aria-label="submit register form"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <p class="footer-logo">SLF</p>
+        <h4 class="footer-title">Follow Us On Our Socials</h4>
+        <div class="socials">
+          <img src="../imgs/twitter.png" alt="twitter" class="social-link" />
+          <img
+            src="../imgs/instagram.png"
+            alt="instagram"
+            class="social-link"
+          />
+          <img src="../imgs/linkedin.png" alt="linkedin" class="social-link" />
+        </div>
+        <p class="contact">
+          Contact us:<br />
+          volunteer@slf.org<br />
+          convention.support@slf.org<br />
+          +1 (800) 555-1234
+        </p>
+        <p class="copyright">
+          Copyright&copy;2025 All rights reserved<br />
+          Designed By Allison Romero
+        </p>
+      </div>
+    </footer>
+    <script defer src="../js/index.js"></script>
+  </body>
+</html>
