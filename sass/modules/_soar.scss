@@ -1,0 +1,307 @@
+@use "colors" as *;
+
+.soar-intro {
+  line-height: 1.4;
+  margin: 3em auto 1.8em auto;
+}
+
+.sub-heading {
+  font-family: optima, sans-serif;
+  font-size: 1.375em;
+  line-height: 1.3;
+}
+
+.intro-bg {
+  background-image: url("../imgs/intro-bg.jpg");
+  background-image: image-set(
+    url("../srcset-imgs/intro-bg900w.jpg") 1x,
+    url("../srcset-imgs/intro-bg1920w.jpg") 2x
+  );
+  background-position: center center;
+}
+
+.soar-bg {
+  background: url("../imgs/soar-bg.jpg");
+  background-position: center top;
+  background-color: grey;
+  background-blend-mode: luminosity;
+}
+
+.intro-bg,
+.soar-bg {
+  height: 12em;
+  background-size: cover;
+}
+
+.sub-title {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  padding-top: 0.75em;
+  padding-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  border-bottom: 1px solid $accent;
+}
+
+.soar-intro p {
+  padding: 0.5em 1em;
+}
+
+@media (min-width: 700px) {
+  .soar-bg {
+    background-position: center 21%;
+    height: 15em;
+  }
+}
+
+@media (min-width: 900px) {
+  .soar-bg {
+    background-position: top 25%;
+    height: 16em;
+  }
+}
+
+.faq {
+  background: $dark;
+  color: $light;
+  margin: 0 auto;
+}
+
+.faq .logo {
+  font-size: 1em;
+  padding: 0 0.15em;
+  letter-spacing: 1.5px;
+}
+
+.dark-mode .faq {
+  background: $light;
+  color: $dark;
+  font-weight: bold;
+}
+
+.faq h3 {
+  text-transform: uppercase;
+  font-family: optima, sans-serif;
+  padding-top: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.speakers {
+  margin-bottom: 1.25em;
+}
+
+address,
+.address {
+  text-align: center;
+}
+
+address {
+  margin-top: 1em;
+}
+
+address,
+.faq p {
+  padding-bottom: 1.15em;
+  padding-top: 0;
+}
+
+.speaker {
+  background: linear-gradient(205deg, #4a2b3f, $accent-dark, $dark, #4a2b2f);
+  padding: 0 1em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border: 1px double $accent-blue;
+  margin: 2.5em 0;
+  color: $light;
+  outline: 1px solid grey;
+  border-radius: 2px;
+}
+
+.speaker h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.speaker-title,
+.about-speaker,
+.faq {
+  font-weight: normal;
+}
+
+.speaker-title {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+  letter-spacing: 2.5px;
+  word-spacing: 3px;
+  border-bottom: 1px double $accent;
+  color: $light;
+  text-transform: uppercase;
+}
+
+.about-speaker {
+  margin-top: 0.65em;
+  padding-bottom: 0.35rem;
+  line-height: 1.3;
+  font-size: 1.095rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.speaker-img {
+  width: 100%;
+  max-height: 12em;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.john-brown {
+  object-position: 100% 25%;
+}
+
+.maggie-fox,
+.eliza-smith {
+  object-position: center center;
+}
+
+.lewis-bates {
+  object-position: 100% 20%;
+}
+
+@media (min-width: 650px) {
+  .lewis-bates {
+    object-position: 100% 30%;
+  }
+}
+
+@media (min-width: 700px) {
+  .speaker-content {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    gap: 0.75em;
+  }
+
+  .eliza-smith {
+    width: 230px;
+    height: 230px;
+    float: left;
+    max-height: none;
+    clip-path: circle(50%);
+    margin-right: 25px;
+    shape-outside: circle(47%);
+  }
+
+  .john-brown,
+  .maggie-fox,
+  .lewis-bates {
+    margin-bottom: 1em;
+  }
+
+  .john-brown {
+    border-radius: 5px;
+  }
+
+  .maggie-fox {
+    height: 250px;
+    border-radius: 10%;
+  }
+  .lewis-bates {
+    height: 240px;
+    max-height: none;
+    border-radius: 50%;
+  }
+
+  .speaker-lewis {
+    gap: 0.128em;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .about-eliza {
+    margin-bottom: 1.5em;
+  }
+
+  .about-maggie {
+    padding-top: 0;
+  }
+
+  .about-john,
+  .about-maggie {
+    line-height: 1.6;
+  }
+
+  .about-eliza,
+  .about-lewis {
+    line-height: 1.5;
+  }
+
+  .about-eliza,
+  .about-maggie,
+  .about-lewis,
+  .about-john {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .speaker {
+    margin: 1.3rem auto 0 auto;
+    outline: 1px double grey;
+  }
+
+  .speaker-img,
+  .eliza-smith,
+  .speaker {
+    border-radius: 0;
+  }
+
+  .speaker-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.15em;
+    row-gap: 1.5em;
+  }
+
+  .speaker-content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about-speaker {
+    margin-top: 1em;
+  }
+
+  .speaker-img,
+  .eliza-smith,
+  .john-brown,
+  .maggie-fox,
+  .lewis-bates {
+    height: 10em;
+    max-height: 10em;
+  }
+
+  .eliza-smith {
+    float: none;
+    clip-path: none;
+    width: 100%;
+  }
+
+  .john-brown,
+  .lewis-bates {
+    object-position: 100% 25%;
+  }
+
+  .maggie-fox {
+    object-position: center center;
+  }
+}
+
+.cta-footer {
+  background: $accent-blue;
+  color: $accent;
+  padding: 3rem;
+}

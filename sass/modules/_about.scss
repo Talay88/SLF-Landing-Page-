@@ -1,0 +1,227 @@
+@use "colors.scss" as *;
+
+.slf-about,
+.volunteer,
+.history {
+  padding: 2em 1em 3rem 1em;
+}
+
+.slf-about p,
+.volunteer p,
+.history p {
+  line-height: 1.4;
+  margin: 1.5rem auto 0 auto;
+}
+
+.founder-img,
+.slf-about-img,
+.about-volunteer-img {
+  width: 100%;
+  border-radius: 0.19em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.history {
+  background: $accent-blue;
+  color: $light;
+  font-weight: normal;
+}
+
+.newsletter-cta {
+  background: $accent-dark;
+  color: $light;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.newsletter-cta .mail-btn {
+  background: $dark;
+  border: 1px solid $accent;
+}
+
+.newsletter-cta .mail-btn:hover,
+.newsletter-cta .mail-btn:focus {
+  background: #4a2b2f;
+  border: 1px solid $accent;
+}
+
+.newsletter-heading {
+  font-size: 2.43rem;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: $accent;
+}
+
+.newsletter-cta p {
+  line-height: 1.5;
+}
+
+.volunteer p:last-of-type {
+  margin-bottom: 1.3em;
+}
+
+.volunteer-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.6em 1.6em;
+  background: linear-gradient(115deg, $accent-dark, $accent);
+  color: $light;
+  border-radius: 0.4375em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.volunteer-cta h2 {
+  font-size: 1.5625rem;
+  text-shadow: 2px 2px 1px $dark;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+.contact-btn {
+  background: $accent-blue;
+  padding: 0.5em 3em;
+  border-radius: 0.1875rem;
+  color: $light;
+  border: 1px double $accent;
+  outline: 1px solid $dark;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: $light;
+  color: $dark;
+  font-weight: bold;
+  border: 2px solid $accent-blue;
+}
+
+@media (min-width: 900px) {
+  .volunteer-row,
+  .volunteer-row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .volunteer-row .about-volunteer-img {
+    width: 45%;
+    object-fit: cover;
+  }
+
+  .volunteer-row2 .volunteer-cta {
+    max-width: 420px;
+    max-height: 420px;
+    min-width: 380px;
+  }
+}
+
+.about-soar {
+  background-image: url("../imgs/about-soar.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  padding: 2.35rem 1rem;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  min-height: 540px;
+}
+
+.about-soar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $light;
+}
+
+.about-soar h1 {
+  text-shadow: 3px 3px 2px $dark;
+  border: 0;
+  font-size: 2.52rem;
+}
+
+.about-soar p {
+  line-height: 1.5;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px $dark;
+  text-align: center;
+}
+
+.about-soar .register-btn {
+  border-radius: 0;
+  border: 1px solid $accent;
+  background: $dark;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  margin: 0.5em auto 0 auto;
+  padding: 0.7em 1.2em;
+  max-width: 400px;
+}
+
+.soar-link {
+  color: $accent;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+
+.soar-link:hover,
+.soar-link:focus {
+  font-size: 1.2em;
+}
+
+@media (min-width: 700px) {
+  .slf-about-img,
+  .about-volunteer-img,
+  .founder-img,
+  .volunteer-cta {
+    width: 80%;
+  }
+
+  .founder-img,
+  .slf-about-img,
+  .about-volunteer-img {
+    max-height: 14em;
+    object-fit: cover;
+    object-position: 100% 39%;
+    filter: grayscale(0.3);
+  }
+}
+
+@media (min-width: 900px) {
+  .newsletter-cta .newsletter-content {
+    flex-direction: row;
+    gap: 0.75em;
+  }
+
+  .newsletter-heading {
+    font-size: 2.3125em;
+    width: 50%;
+  }
+
+  .newsletter-grp {
+    border-left: 1px solid $accent-blue;
+    width: 50%;
+    font-size: 23px;
+  }
+  .newsletter-grp .mail-btn {
+    font-size: 0.85em;
+  }
+  .about-soar p {
+    width: 70%;
+  }
+  .about-volunteer-img {
+    max-height: 100%;
+    filter: grayscale(0.1);
+  }
+}

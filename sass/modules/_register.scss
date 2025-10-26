@@ -1,0 +1,165 @@
+@use "colors.scss" as *;
+
+.style-all {
+  background-image: url("../imgs/register-bg.jpg");
+  background-image: image-set(
+    url("../srcset-imgs/register-bg500w.jpg") x1,
+    url("../srcset-imgs/register-bg700w.jpg") x2,
+    url("../srcset-imgs/register-bg900w.jpg") x3,
+    url("../srcset-imgs/register-bg1920w.jpg") x4
+  );
+  background-size: cover;
+  background-position: center center;
+}
+
+.register {
+  padding: 2rem 1rem;
+  text-shadow: 1px 1px 1px $light;
+  color: $dark;
+}
+
+.register h1 {
+  border: 0;
+}
+
+.register .register-btn {
+  margin-top: 0.25em;
+  margin-bottom: 3em;
+  padding: 0.5em 7em;
+}
+
+.dark-mode .register {
+  color: $light;
+  text-shadow: 2px 2px 2px $dark;
+}
+
+.color {
+  color: $light;
+  text-shadow: 2px 1px 6px $dark;
+}
+
+.dark-mode .color-dark {
+  color: $dark;
+  text-shadow: none;
+}
+
+input {
+  padding: 0.35em 1em;
+  border: 2px solid $accent;
+  opacity: 0.9;
+  accent-color: $accent-blue;
+}
+
+label {
+  font-weight: bold;
+  padding: 0.25rem;
+  text-transform: uppercase;
+}
+
+input:not([type="checkbox"]) {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input:user-valid {
+  outline-color: green;
+}
+
+.input:user-invalid,
+.input:focus:invalid {
+  outline-color: red;
+}
+
+.fname {
+  grid-area: "fname";
+}
+
+.lname {
+  grid-area: "lname";
+}
+
+.email {
+  grid-area: "email";
+}
+
+.age {
+  grid-area: "age";
+}
+
+.company {
+  grid-area: "company";
+}
+
+.terms {
+  grid-area: "terms";
+}
+
+.fine-print {
+  padding: 0.5em 0;
+  line-height: 1.3;
+}
+
+.privacy {
+  font-size: 0.85rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
+  padding: 0.25em;
+}
+
+.phone {
+  grid-area: "phone";
+}
+
+.submit-btn,
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.submit-btn {
+  grid-area: submit;
+}
+
+.form-container {
+  width: 100%;
+  gap: 1em;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
+  grid-template-areas:
+    "fname"
+    "lname"
+    "phone"
+    "age"
+    "email"
+    "company"
+    "terms";
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+@media (min-width: 650px) {
+  .form-container {
+    width: 67%;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 900px) {
+  .form-container {
+    width: 45%;
+    max-width: 500px;
+  }
+}
